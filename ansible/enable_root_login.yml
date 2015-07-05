@@ -1,0 +1,13 @@
+---
+- hosts: all
+  remote_user: atheneum
+  sudo: yes
+  vars:
+    deploy_user: atheneum
+    deploy_group: atheneum
+  tasks:
+  - name: Allow root SSH access
+    action: lineinfile dest=/etc/ssh/sshd_config regexp="^PermitRootLogin" line="PermitRootLogin yes" state=present
+    notify: Restart ssh
+  roles:
+    - deploy-user

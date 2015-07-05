@@ -1,0 +1,549 @@
+{
+  "ItemLookupResponse": {
+    "xmlns": "http://webservices.amazon.com/AWSECommerceService/2011-08-01",
+    "OperationRequest": {
+      "HTTPHeaders": {
+        "Header": {
+          "Name": "UserAgent",
+          "Value": "Jeff/1.2.0 (Language=Ruby; hendriks-mbp.numsa.org.za)"
+        }
+      },
+      "RequestId": "c9aec1f1-82bd-486b-bf1e-36ba5677dfd4",
+      "Arguments": {
+        "Argument": [{
+          "Name": "AWSAccessKeyId",
+          "Value": "AKIAICS462Z4WXWQKTZQ"
+        }, {
+          "Name": "AssociateTag",
+          "Value": "tag"
+        }, {
+          "Name": "IdType",
+          "Value": "ISBN"
+        }, {
+          "Name": "ItemId",
+          "Value": "020161622X"
+        }, {
+          "Name": "Operation",
+          "Value": "ItemLookup"
+        }, {
+          "Name": "ResponseGroup",
+          "Value": "Small, Images"
+        }, {
+          "Name": "SearchIndex",
+          "Value": "Books"
+        }, {
+          "Name": "Service",
+          "Value": "AWSECommerceService"
+        }, {
+          "Name": "SignatureMethod",
+          "Value": "HmacSHA256"
+        }, {
+          "Name": "SignatureVersion",
+          "Value": "2"
+        }, {
+          "Name": "Timestamp",
+          "Value": "2015-03-24T06:45:28Z"
+        }, {
+          "Name": "Version",
+          "Value": "2011-08-01"
+        }, {
+          "Name": "Signature",
+          "Value": "E3CgPoXeLq6bIMRdfVW05Bk43mQBWjd++0JtvJa9qCg="
+        }]
+      },
+      "RequestProcessingTime": "0.2185430000000000"
+    },
+    "Items": {
+      "Request": {
+        "IsValid": "True",
+        "ItemLookupRequest": {
+          "IdType": "ISBN",
+          "ItemId": "020161622X",
+          "ResponseGroup": ["Small", "Images"],
+          "SearchIndex": "Books",
+          "VariationPage": "All"
+        }
+      },
+      "Item": [{
+        "ASIN": "020161622X",
+        "DetailPageURL": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D020161622X",
+        "ItemLinks": {
+          "ItemLink": [{
+            "Description": "Technical Details",
+            "URL": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/tech-data/020161622X%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D020161622X"
+          }, {
+            "Description": "Add To Baby Registry",
+            "URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D020161622X%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D020161622X"
+          }, {
+            "Description": "Add To Wedding Registry",
+            "URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D020161622X%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D020161622X"
+          }, {
+            "Description": "Add To Wishlist",
+            "URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D020161622X%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D020161622X"
+          }, {
+            "Description": "Tell A Friend",
+            "URL": "http://www.amazon.com/gp/pdp/taf/020161622X%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D020161622X"
+          }, {
+            "Description": "All Customer Reviews",
+            "URL": "http://www.amazon.com/review/product/020161622X%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D020161622X"
+          }, {
+            "Description": "All Offers",
+            "URL": "http://www.amazon.com/gp/offer-listing/020161622X%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D020161622X"
+          }]
+        },
+        "SmallImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SL75_.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "75"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "60"
+          }
+        },
+        "MediumImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SL160_.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "160"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "127"
+          }
+        },
+        "LargeImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "500"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "398"
+          }
+        },
+        "ImageSets": {
+          "ImageSet": [{
+            "Category": "primary",
+            "SwatchImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SL30_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "30"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "24"
+              }
+            },
+            "SmallImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "60"
+              }
+            },
+            "ThumbnailImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "60"
+              }
+            },
+            "TinyImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SL110_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "110"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "88"
+              }
+            },
+            "MediumImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SL160_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "160"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "127"
+              }
+            },
+            "LargeImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41BKx1AxQWL.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "500"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "398"
+              }
+            }
+          }, {
+            "Category": "variant",
+            "SwatchImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51xsf5kAtEL._SL30_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "30"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "24"
+              }
+            },
+            "SmallImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51xsf5kAtEL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "59"
+              }
+            },
+            "ThumbnailImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51xsf5kAtEL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "59"
+              }
+            },
+            "TinyImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51xsf5kAtEL._SL110_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "110"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "87"
+              }
+            },
+            "MediumImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51xsf5kAtEL._SL160_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "160"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "126"
+              }
+            },
+            "LargeImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51xsf5kAtEL.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "500"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "395"
+              }
+            }
+          }]
+        },
+        "ItemAttributes": {
+          "Author": ["Andrew Hunt", "David Thomas"],
+          "Manufacturer": "Addison-Wesley Professional",
+          "ProductGroup": "Book",
+          "Title": "The Pragmatic Programmer: From Journeyman to Master"
+        }
+      }, {
+        "ASIN": "B004HOXBMY",
+        "DetailPageURL": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/B004HOXBMY%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB004HOXBMY",
+        "ItemLinks": {
+          "ItemLink": [{
+            "Description": "Technical Details",
+            "URL": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/tech-data/B004HOXBMY%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004HOXBMY"
+          }, {
+            "Description": "Add To Baby Registry",
+            "URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB004HOXBMY%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004HOXBMY"
+          }, {
+            "Description": "Add To Wedding Registry",
+            "URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB004HOXBMY%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004HOXBMY"
+          }, {
+            "Description": "Add To Wishlist",
+            "URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB004HOXBMY%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004HOXBMY"
+          }, {
+            "Description": "Tell A Friend",
+            "URL": "http://www.amazon.com/gp/pdp/taf/B004HOXBMY%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004HOXBMY"
+          }, {
+            "Description": "All Customer Reviews",
+            "URL": "http://www.amazon.com/review/product/B004HOXBMY%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004HOXBMY"
+          }, {
+            "Description": "All Offers",
+            "URL": "http://www.amazon.com/gp/offer-listing/B004HOXBMY%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004HOXBMY"
+          }]
+        },
+        "SmallImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL._SL75_.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "75"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "56"
+          }
+        },
+        "MediumImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL._SL160_.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "160"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "120"
+          }
+        },
+        "LargeImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "500"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "374"
+          }
+        },
+        "ImageSets": {
+          "ImageSet": {
+            "Category": "primary",
+            "SwatchImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL._SL30_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "30"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "22"
+              }
+            },
+            "SmallImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "56"
+              }
+            },
+            "ThumbnailImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "56"
+              }
+            },
+            "TinyImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL._SL110_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "110"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "82"
+              }
+            },
+            "MediumImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL._SL160_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "160"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "120"
+              }
+            },
+            "LargeImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/51L18wxlnAL.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "500"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "374"
+              }
+            }
+          }
+        },
+        "ItemAttributes": {
+          "Author": "AndrewHunt&DavidThomas",
+          "Manufacturer": "AdisonWsly Longman;Inc.,2000",
+          "ProductGroup": "Book",
+          "Title": "The Pragmatic Programmer: From Journeyman to Master"
+        }
+      }, {
+        "ASIN": "B003GCTQAE",
+        "DetailPageURL": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master-ebook/dp/B003GCTQAE%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB003GCTQAE",
+        "ItemLinks": {
+          "ItemLink": [{
+            "Description": "Technical Details",
+            "URL": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master-ebook/dp/tech-data/B003GCTQAE%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003GCTQAE"
+          }, {
+            "Description": "Add To Baby Registry",
+            "URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB003GCTQAE%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003GCTQAE"
+          }, {
+            "Description": "Add To Wedding Registry",
+            "URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB003GCTQAE%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003GCTQAE"
+          }, {
+            "Description": "Add To Wishlist",
+            "URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB003GCTQAE%26SubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003GCTQAE"
+          }, {
+            "Description": "Tell A Friend",
+            "URL": "http://www.amazon.com/gp/pdp/taf/B003GCTQAE%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003GCTQAE"
+          }, {
+            "Description": "All Customer Reviews",
+            "URL": "http://www.amazon.com/review/product/B003GCTQAE%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003GCTQAE"
+          }, {
+            "Description": "All Offers",
+            "URL": "http://www.amazon.com/gp/offer-listing/B003GCTQAE%3FSubscriptionId%3DAKIAICS462Z4WXWQKTZQ%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003GCTQAE"
+          }]
+        },
+        "SmallImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL._SL75_.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "75"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "60"
+          }
+        },
+        "MediumImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL._SL160_.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "160"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "127"
+          }
+        },
+        "LargeImage": {
+          "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL.jpg",
+          "Height": {
+            "Units": "pixels",
+            "__content__": "500"
+          },
+          "Width": {
+            "Units": "pixels",
+            "__content__": "398"
+          }
+        },
+        "ImageSets": {
+          "ImageSet": {
+            "Category": "primary",
+            "SwatchImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL._SL30_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "30"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "24"
+              }
+            },
+            "SmallImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "60"
+              }
+            },
+            "ThumbnailImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL._SL75_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "75"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "60"
+              }
+            },
+            "TinyImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL._SL110_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "110"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "88"
+              }
+            },
+            "MediumImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL._SL160_.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "160"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "127"
+              }
+            },
+            "LargeImage": {
+              "URL": "http://ecx.images-amazon.com/images/I/41uPjEenkFL.jpg",
+              "Height": {
+                "Units": "pixels",
+                "__content__": "500"
+              },
+              "Width": {
+                "Units": "pixels",
+                "__content__": "398"
+              }
+            }
+          }
+        },
+        "ItemAttributes": {
+          "Author": ["Andrew Hunt", "David Thomas"],
+          "Manufacturer": "Addison-Wesley Professional",
+          "ProductGroup": "eBooks",
+          "Title": "The Pragmatic Programmer: From Journeyman to Master"
+        }
+      }]
+    }
+  }
+}

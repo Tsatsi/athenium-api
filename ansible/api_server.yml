@@ -1,0 +1,29 @@
+---
+- hosts: api-servers
+  remote_user: atheneum
+  vars:
+    deploy_user: atheneum
+    deploy_group: atheneum
+  roles:
+    - base
+    - git
+    - rbenv
+    - passenger-nginx
+    - mongodb
+    - atheneum-api
+
+# TODO:
+# Setup NTP
+
+# Setup Passenger
+# Setup api.athenuem.io
+# Setup atheneum.io / www.atheneum.io
+
+# Setup nginx to run with passenger on api.atheneum.io
+# Set up AWS keys
+# Setup mongoDB
+
+# Setup log rotate for
+# nginx
+# atheneum app
+

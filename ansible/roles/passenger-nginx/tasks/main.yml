@@ -1,0 +1,43 @@
+---
+- name: Remove apache2
+  apt: name=apache2 state=absent
+  sudo: yes
+
+- name: apt - add key for passenger repos
+  apt_key: url=http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x561F9B9CAC40B2F7 id=AC40B2F7 state=present
+  sudo: yes
+
+- name: apt - add support for https
+  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+  - apt-transport-https
+  - ca-certificates
+  sudo: yes
+
+- name: apt - add passenger repo
+  apt_repository: repo='deb https://oss-binaries.phusionpassenger.com/apt/passenger {{ ansible_lsb.codename }} main' state=present update_cache=yes
+  sudo: yes
+
+- name: pkg - install nginx passenger packages
+  apt: pkg={{ item }} state=present
+  with_items:
+    - nginx-extras
+    - passenger
+  notify: nginx restart
+  sudo: yes
+
+- name: Remove default nginx config file
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  sudo: yes
+
+- name: Copy app specific nginx site configurations
+  copy: src="{{ item }}" dest=/etc/nginx/sites-enabled/ owner=root mode=755
+  with_fileglob:
+    - "*.conf"
+  sudo: yes
+  notify: nginx restart
+
+- name: Copy app specific nginx site configuration templates
+  template: src=api.atheneum.io.conf.j2 dest=/etc/nginx/sites-enabled/api.atheneum.io.conf owner=root mode=755
+  sudo: yes
+  notify: nginx restart

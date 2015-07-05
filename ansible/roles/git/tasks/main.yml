@@ -1,0 +1,4 @@
+---
+- name: Install git
+  apt: pkg=git-core state=latest install_recommends=yes
+  sudo: yes

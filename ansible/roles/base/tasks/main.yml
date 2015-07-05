@@ -1,0 +1,12 @@
+---
+- name: Update APT package cache
+  action: apt update_cache=yes cache_valid_time=3600
+  sudo: yes
+
+- name: Upgrade APT to the lastest packages
+  apt: upgrade=safe
+  sudo: yes
+
+- name: Install fail2ban
+  apt: pkg=fail2ban state=installed
+  sudo: yes

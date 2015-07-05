@@ -1,0 +1,74 @@
+---
+- name: rbenv | install build depends
+  apt: pkg={{ item }} state=latest install_recommends=yes
+  with_items:
+    - curl
+    - zlib1g-dev
+    - build-essential
+    - libssl-dev
+    - libreadline-dev
+    - libyaml-dev
+    - libsqlite3-dev
+    - sqlite3
+    - libxml2-dev
+    - libxslt1-dev
+    - libcurl4-openssl-dev
+    - python-software-properties
+    - libffi-dev
+
+- name: rbenv | update rbenv repo
+  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }} version=v0.4.0 accept_hostkey=yes
+
+- name: rbenv | add rbenv to path
+  file: path=/usr/local/bin/rbenv src={{ rbenv_root }}/bin/rbenv state=link
+  sudo: yes
+
+- name: rbenv | add rbenv initialization to profile
+  template: src=rbenv.sh.j2 dest=/home/{{deploy_user}}/.bashrc owner={{deploy_user}} group={{deploy_group}} mode=0755
+
+- name: rbenv | check ruby-build installed
+  command: test -x /usr/local/bin/ruby-build
+  register: rbuild_present
+  ignore_errors: yes
+  sudo: yes
+
+- name: rbenv | create temporary directory
+  command: mktemp -d
+  register: tempdir
+  when: rbuild_present|failed
+  sudo: yes
+
+- name: rbenv | clone ruby-build repo
+  git: repo=git://github.com/sstephenson/ruby-build.git dest={{ tempdir.stdout }}/ruby-build accept_hostkey=yes
+  when: rbuild_present|failed
+  sudo: yes
+
+- name: rbenv | install ruby-build
+  command: ./install.sh chdir={{ tempdir.stdout }}/ruby-build
+  when: rbuild_present|failed
+  sudo: yes
+
+- name: rbenv | remove temporary directory
+  file: path={{ tempdir.stdout }} state=absent
+  when: rbuild_present|failed
+  sudo: yes
+
+- name: rbenv | check ruby {{ ruby_version }} installed
+  shell: RBENV_ROOT={{ rbenv_root }} rbenv versions | grep {{ ruby_version }}
+  register: ruby_installed
+  ignore_errors: yes
+
+- name: rbenv | install ruby {{ ruby_version }}
+  shell: RBENV_ROOT={{ rbenv_root }} rbenv install {{ ruby_version }}
+  when: ruby_installed|failed
+
+- name: rbenv | set global ruby {{ ruby_version }}
+  shell: RBENV_ROOT={{ rbenv_root }} rbenv global {{ ruby_version }}
+  when: ruby_installed|failed
+
+- name: rbenv | rehash
+  shell: RBENV_ROOT={{ rbenv_root }} rbenv rehash
+  when: ruby_installed|failed
+
+- name: rbenv | set gemrc
+  copy: src=gemrc dest=/home/{{deploy_user}}/.gemrc owner={{deploy_user}} group={{deploy_group}} mode=0644

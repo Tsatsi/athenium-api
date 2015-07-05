@@ -1,0 +1,2 @@
+rbenv_root: /home/{{deploy_user}}/.rbenv
+ruby_version: 2.2.0

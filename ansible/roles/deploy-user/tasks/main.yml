@@ -1,0 +1,33 @@
+---
+- name: Create deployment group
+  group: name={{deploy_group}} state=present
+  sudo: yes
+
+- name: Create deployment user
+  user: name={{deploy_user}} generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa group={{deploy_group}}
+  sudo: yes
+
+- name: Set up authorized_keys for the deploy user
+  authorized_key: user={{deploy_user}}
+                  key="{{ item }}"
+  with_file:
+    - hendrik-tw-macbook-pro
+  sudo: yes
+
+- name: Remove sudo group rights
+  action: lineinfile dest=/etc/sudoers regexp="^%sudo" state=absent
+  sudo: yes
+
+- name: Add deploy user to sudoers
+  action: lineinfile dest=/etc/sudoers regexp="{{deploy_user}} ALL" line="{{deploy_user}} ALL=(ALL) NOPASSWD:ALL" state=present
+  sudo: yes
+
+- name: Disallow password authentication
+  action: lineinfile dest=/etc/ssh/sshd_config regexp="^PasswordAuthentication" line="PasswordAuthentication no" state=present
+  notify: Restart ssh
+  sudo: yes
+
+- name: Disallow root SSH access
+  action: lineinfile dest=/etc/ssh/sshd_config regexp="^PermitRootLogin" line="PermitRootLogin no" state=present
+  notify: Restart ssh
+  sudo: yes

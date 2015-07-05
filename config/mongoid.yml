@@ -1,0 +1,14 @@
+development:
+  sessions:
+    default:
+      autocreate_indexes: true
+      database: atheneum-development
+      hosts:
+        - localhost:27017
+test:
+  sessions:
+    default:
+      autocreate_indexes: true
+      database: atheneum-test
+      hosts:
+        - localhost:27017

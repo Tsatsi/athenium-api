@@ -1,0 +1,6 @@
+server {
+	listen api.atheneum.io:80;
+	server_name api.atheneum.io;
+	passenger_enabled on;
+    root /home/{{deploy_user}}/public;
+}

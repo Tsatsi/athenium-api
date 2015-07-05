@@ -1,0 +1,9 @@
+---
+- hosts: all
+  remote_user: root
+  vars:
+    deploy_user: atheneum
+    deploy_group: atheneum
+  roles:
+    - base
+    - deploy-user
